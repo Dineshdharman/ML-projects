@@ -26,6 +26,7 @@ model.fit(X_train, y_train)
 # Upload image section
 st.subheader("Upload an Image of a Handwritten Digit")
 uploaded_file = st.file_uploader("Choose an image...", type="png")
+st.info("You have draw the number using Ms-Paint and upload it")
 
 if uploaded_file is not None:
     # Convert the uploaded image to grayscale and invert it
