@@ -1,4 +1,8 @@
-streamlit
 scikit-learn
-matplotlib
 pillow
+pandas==2.0.3
+seaborn==0.12.2
+nltk==3.8.1
+matplotlib==3.7.2
+wordcloud==1.9.2
+streamlit==1.25.0
