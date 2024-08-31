@@ -1,6 +1,6 @@
-setuptools>=65.5.1          # Ensures compatibility with Python 3.12
+setuptools>=65.5.1                # Ensures compatibility with Python 3.12
 streamlit==1.26.0
 scikit-learn==1.2.2
-pillow==10.0.0              # Latest compatible version with Streamlit
-numpy==1.24.4               # Compatible with Python 3.12
-matplotlib==3.7.3           # Compatible with Python 3.12
+pillow==9.5.0                     # Compatible with Streamlit 1.26.0 (within <10)
+numpy==1.24.4                     # Compatible with Python 3.12
+matplotlib==3.7.3                 # Compatible with Python 3.12
