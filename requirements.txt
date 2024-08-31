@@ -1,5 +1,6 @@
+setuptools>=42
 streamlit==1.26.0
 scikit-learn==1.2.2
 pillow==9.4.0
-numpy==1.23.5          # Updated to a version with better compatibility
+numpy==1.21.6
 matplotlib==3.6.2
