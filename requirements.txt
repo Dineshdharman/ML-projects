@@ -1,5 +1,5 @@
 streamlit==1.26.0
-scikit-learn==1.2.2       # Compatible version for Logistic Regression and dataset functions
-pillow==9.4.0             # Compatible version for image handling with Streamlit
-numpy==1.21.0             # Compatible with scikit-learn and other libraries
-matplotlib==3.6.2         # Compatible with Streamlit and numpy
+scikit-learn==1.2.2
+pillow==9.4.0
+numpy==1.23.5          # Updated to a version with better compatibility
+matplotlib==3.6.2
