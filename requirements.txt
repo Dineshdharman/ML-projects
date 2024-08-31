@@ -1,8 +1,5 @@
 streamlit==1.26.0
-scikit-learn==1.2.2  
-pillow==9.4.0        
-pandas==2.0.3        
-seaborn==0.12.2      
-nltk==3.8.1          
-matplotlib==3.6.2   
-wordcloud==1.8.1     
+scikit-learn==1.2.2       # Compatible version for Logistic Regression and dataset functions
+pillow==9.4.0             # Compatible version for image handling with Streamlit
+numpy==1.21.0             # Compatible with scikit-learn and other libraries
+matplotlib==3.6.2         # Compatible with Streamlit and numpy
