@@ -55,22 +55,23 @@ st.pyplot(plt)  # Render the plot for review length by category
 st.write("Mean review length by category:", df.groupby('category')['review_length'].mean())
 
 # Wordcloud analysis
-wordcloud_positive = WordCloud(width=800, height=400, background_color='white').generate(positive_review)
-wordcloud_negative = WordCloud(width=800, height=400, background_color='white').generate(negative_review)
+st.header("Wordcloud Analysis")
+positive_review = ' '.join(df[df['category'] == 1]['cleaned_review'])
+negative_review = ' '.join(df[df['category'] == -1]['cleaned_review'])
+wordcloud_positive = WordCloud().generate(positive_review)
+wordcloud_negative = WordCloud().generate(negative_review)
 
-# Plotting word clouds side by side
-fig, ax = plt.subplots(1, 2, figsize=(15, 7))
+fig, ax = plt.subplots(1, 2, figsize=(10, 5))
 
 ax[0].imshow(wordcloud_positive, interpolation='bilinear')
 ax[0].axis('off')
 ax[0].set_title('Positive Reviews')
 
-ax[1].imshow(wordcloud_negative, interpolation='bilinear')
+ax[1].imshow(wordcloud_negative)
 ax[1].axis('off')
 ax[1].set_title('Negative Reviews')
 
-# Display the wordclouds in Streamlit
-st.pyplot(fig)
+st.pyplot(fig)  # Render the wordclouds
 
 # Text data visualization
 st.header("Text Data Visualization")
@@ -88,4 +89,4 @@ ax[0].set_title('Most Common Words in Positive Reviews')
 sns.barplot(x='words', y='count', data=negative_review_df, ax=ax[1])
 ax[1].set_title('Most Common Words in Negative Reviews')
 
-st.pyplot(fig)  # Render the bar plots for most common words
+st.pyplot(fig)  # Render the bar plots for most common words"
