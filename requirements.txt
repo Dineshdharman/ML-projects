@@ -5,7 +5,7 @@ numpy
 matplotlib
 seaborn
 nltk==3.8.1
-wordcloud==1.8.1
+wordcloud==1.8.2.2
 configparser==4.0.2
 pip==24.2
 setuptools==68.0.0
