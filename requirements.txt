@@ -4,4 +4,4 @@ pillow
 numpy
 matplotlib
 seaborn
-nlkt
+nlkt==3.8.1
