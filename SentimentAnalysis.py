@@ -55,11 +55,18 @@ st.pyplot(plt)  # Render the plot for review length by category
 st.write("Mean review length by category:", df.groupby('category')['review_length'].mean())
 
 # Wordcloud analysis
+def get_text_size(text, font):
+    draw = ImageDraw.Draw(Image.new('RGB', (1, 1)))
+    return draw.textbbox((0, 0), text, font=font)
+
+# In your Streamlit code
 st.header("Wordcloud Analysis")
+
 positive_review = ' '.join(df[df['category'] == 1]['cleaned_review'])
 negative_review = ' '.join(df[df['category'] == -1]['cleaned_review'])
-wordcloud_positive = WordCloud().generate(positive_review)
-wordcloud_negative = WordCloud().generate(negative_review)
+
+wordcloud_positive = WordCloud(font_path=None, width=800, height=400, background_color='white').generate(positive_review)
+wordcloud_negative = WordCloud(font_path=None, width=800, height=400, background_color='white').generate(negative_review)
 
 fig, ax = plt.subplots(1, 2, figsize=(10, 5))
 
@@ -67,7 +74,7 @@ ax[0].imshow(wordcloud_positive, interpolation='bilinear')
 ax[0].axis('off')
 ax[0].set_title('Positive Reviews')
 
-ax[1].imshow(wordcloud_negative)
+ax[1].imshow(wordcloud_negative, interpolation='bilinear')
 ax[1].axis('off')
 ax[1].set_title('Negative Reviews')
 
