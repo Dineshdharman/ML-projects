@@ -12,7 +12,8 @@ import streamlit as st
 st.title("Twitter Sentiment Analysis")
 
 # Load the dataset
-df = pd.read_csv(r"C:\Users\HP\Downloads\Twitter_Data.csv")
+df = pd.read_csv("./Twitter_Data.csv")
+
 
 # Inspect the dataset
 st.header("Dataset Overview")
@@ -77,7 +78,7 @@ positive_words = Counter(' '.join(df[df['category'] == 1]['cleaned_review']).spl
 negative_words = Counter(' '.join(df[df['category'] == -1]['cleaned_review']).split())
 
 positive_review_df = pd.DataFrame(positive_words.most_common(9), columns=['words', 'count'])
-negative_review_df = pd.DataFrame(negative_words.most_common(5), columns['words', 'count'])
+negative_review_df = pd.DataFrame(negative_words.most_common(5), columns=['words', 'count'])
 
 fig, ax = plt.subplots(1, 2, figsize=(14, 6))
 
