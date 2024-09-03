@@ -13,6 +13,7 @@ st.title("Twitter Sentiment Analysis")
 
 # Load the dataset
 df = pd.read_csv("./Twitter_Data.csv")
+nltk.download('stopwords')
 
 
 # Inspect the dataset
